@@ -1,80 +1,119 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apresentação — Natalia Lacerda Messias</title>
-    <link rel="stylesheet" href="main.css">
+  <meta charset="UTF-8">
+  <title>Site de Receitas de Bolo</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+    header {
+      background: #f4a261;
+      padding: 20px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      color: white;
+    }
+    main {
+      flex: 1;
+      display: flex;
+      background: #fdf6e3;
+    }
+    .coluna {
+      flex: 1;
+      padding: 20px;
+      border: 1px solid #ddd;
+      overflow: auto;
+    }
+    .menu-esquerda ul, .menu-direita ul {
+      list-style: none;
+      padding: 0;
+    }
+    .menu-esquerda li, .menu-direita li {
+      margin: 10px 0;
+      cursor: pointer;
+      padding: 8px;
+      background: #e9c46a;
+      border-radius: 5px;
+      text-align: center;
+      transition: 0.3s;
+    }
+    .menu-esquerda li:hover, .menu-direita li:hover {
+      background: #f4a261;
+      color: white;
+    }
+    .conteudo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 40px;
+      font-weight: bold;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 10px;
+      transition: all 0.3s ease-in-out;
+    }
+    .destaque {
+      flex: 2;
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(5px);
+    }
+    footer {
+      background: #2a9d8f;
+      text-align: center;
+      color: white;
+      padding: 10px;
+    }
+    a {
+      text-decoration: none;
+      color: #2a9d8f;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+  <script>
+    function destacar() {
+      let conteudo = document.getElementById("centro");
+      conteudo.classList.toggle("destaque");
+    }
+  </script>
 </head>
 <body>
-
-    <!-- Cabeçalho -->
-    <header>
-        <div class="container">
-            <h1>Natalia Lacerda Messias</h1>
-            <nav>
-                <ul>
-                    <li><a href="#sobre">Sobre mim</a></li>
-                    <li><a href="#informacoes">Informações</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Seção Sobre mim -->
-    <section id="sobre" class="sobre">
-        <div class="container sobre-container">
-            <div class="foto">
-                <img src="minha-foto.jpeg" alt="Foto de Natalia Lacerda Messias">
-            </div>
-            <div class="texto">
-                <h2>Sobre mim</h2>
-                <p>Olá, meu nome é <strong>Natalia Lacerda Messias</strong>. Tenho 17 anos e sou aluna do <strong>terceiro ano do ensino médio</strong>, na área técnica de <strong>informática</strong>. Estou sempre buscando conhecimento e evoluindo um pouco a cada projeto e desafio.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Seção Informações -->
-    <section id="informacoes" class="informacoes">
-        <div class="container">
-            <h2>Minhas informações</h2>
-            <div class="info-grid">
-                <div class="info-card">
-                    <h3>🎂 Idade</h3>
-                    <p>17 anos</p>
-                </div>
-                <div class="info-card">
-                    <h3>📅 Data de Nascimento</h3>
-                    <p>16/02/2008</p>
-                </div>
-                <div class="info-card">
-                    <h3>💻 Área</h3>
-                    <p>Técnica de Informática</p>
-                </div>
-                <div class="info-card">
-                    <h3>📚 Objetivo</h3>
-                    <p>Aprender sempre</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Seção Contato -->
-    <section id="contato" class="contato">
-        <div class="container">
-            <h2>Entre em contato</h2>
-            <p>Você pode me encontrar pessoalmente ou através de redes sociais e e-mail.</p>
-            <a href="#" class="btn">Enviar mensagem</a>
-        </div>
-    </section>
-
-    <!-- Rodapé -->
-    <footer>
-        <div class="container">
-            <p>© 2025 • Feito com HTML e CSS — Natalia Lacerda Messias</p>
-        </div>
-    </footer>
-
+  <header>🍰 Receitas de Bolos da Natalia 🍰</header>
+  
+  <main>
+    <div class="coluna menu-esquerda">
+      <ul>
+        <li onclick="destacar()">Opção 1</li>
+        <li onclick="destacar()">Opção 2</li>
+        <li onclick="destacar()">Opção 3</li>
+      </ul>
+    </div>
+    
+    <div class="coluna conteudo" id="centro">
+      <div>
+        <p>A</p>
+        <p><a href="pagina2.html">Ir para a Página 2 →</a></p>
+      </div>
+    </div>
+    
+    <div class="coluna menu-direita">
+      <h3>Mais informações</h3>
+      <ul>
+        <li>Dicas de confeitaria</li>
+        <li>Utensílios recomendados</li>
+        <li>Contato</li>
+      </ul>
+    </div>
+  </main>
+  
+  <footer>
+    © 2025 - Todos os direitos reservados | Natalia Lacerda
+  </footer>
 </body>
 </html>
